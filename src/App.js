@@ -11,7 +11,7 @@ function App() {
   const [intervalo, setIntervalo] = useState(1); // Configuración del intervalo de actualización en segundos
 
   const fetchRoomsData = async () => {
-    let url = "https://50.19.7.9/usosHabitacion"; // Asegúrate de usar tu URL correcta
+    let url = "https://usacarqui2api.site/usosHabitacion"; // Asegúrate de usar tu URL correcta
 
     // Construir los parámetros de la consulta basados en el modo
     const params = new URLSearchParams();
