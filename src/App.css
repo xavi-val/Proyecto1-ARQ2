@@ -1,0 +1,30 @@
+.App-header {
+  background-color: #282c34;
+  color: white;
+  padding: 20px;
+  border-radius: 8px 8px 0 0;
+}
+
+.App-header h1 {
+  margin: 0;
+}
+
+
+/* App.css */
+
+.heatmap-container {
+  display: flex;
+  flex-direction: column; /* Por defecto, los elementos se apilan verticalmente */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: flex-start; /* Alinea los elementos al inicio verticalmente */
+  gap: 20px; /* Espacio entre cada HeatMap */
+}
+
+/* Media query para pantallas de PC (asumiendo que "PC" significa un ancho mínimo de 768px) */
+@media (min-width: 768px) {
+  .heatmap-container {
+    flex-direction: row; /* Cambia la disposición a fila para pantallas más grandes */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan si no caben en una sola línea */
+    justify-content: center; /* Centra los elementos horizontalmente */
+  }
+}
