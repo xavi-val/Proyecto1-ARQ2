@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import HeatMap from "./HeatMap";
+import moment from "moment-timezone";
 
 function App() {
   const [modo, setModo] = useState("realTime");
@@ -16,7 +17,7 @@ function App() {
     // Construir los parámetros de la consulta basados en el modo
     const params = new URLSearchParams();
     if (modo === "realTime") {
-      const hoy = new Date().toISOString().split("T")[0];
+      const hoy = moment().tz("America/Belize").format("YYYY-MM-DD");
       params.append("fecha", hoy);
     } else {
       if (fechaInicio) params.append("fechaInicio", fechaInicio);
